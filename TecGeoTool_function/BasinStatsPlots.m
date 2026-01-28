@@ -560,7 +560,7 @@ function BasinStatsPlots(basin_table,plots,varargin)
 				idx=cix==ii;
 				plot(normF(:,idx),normEl(:,idx),'Color',cm(ii,:));
 			end
-			caxis([min(ed) max(ed)]);
+			clim([min(ed) max(ed)]);
 			cb=colorbar;
 			% 去除下划线
 			color_by_label=strrep(color_by,'_',' ');
@@ -607,7 +607,7 @@ function BasinStatsPlots(basin_table,plots,varargin)
 				idx=cix==ii;
 				plot(F(:,idx),El(:,idx),'Color',cm(ii,:));
 			end
-			caxis([min(ed) max(ed)]);			
+			clim([min(ed) max(ed)]);			
 			cb=colorbar;
 			% 去除下划线
 			color_by_label=strrep(color_by,'_',' ');
@@ -708,7 +708,7 @@ function BasinStatsPlots(basin_table,plots,varargin)
 			end
 			plot(mF{ii,1},mE{ii,1},'Color',cl,'LineWidth',2);
 		end
-		caxis([min(pf) max(pf)]);
+		clim([min(pf) max(pf)]);
 		cb=colorbar;
 		ylabel(cb,'流域百分比')
 		axis equal
